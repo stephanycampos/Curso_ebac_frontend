@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu portal de notícias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 10px 0 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category h2 {
+            margin: 10px 0;
+            padding: 10px;
+            color: white;
+        }
+        .category.esportes h2 {
+            background-color: #333;
+        }
+        .category.economia h2 {
+            background-color: yellow;
+            color: black;
+        }
+        .category.tecnologia h2 {
+            background-color: blue;
+        }
+        .category.moda h2 {
+            background-color: purple;
+        }
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .article {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex: 1 1 calc(33.333% - 20px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .article-content {
+            padding: 15px;
+        }
+        .article-content p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .article-content a {
+            display: inline-block;
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+        .article-content a:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu portal de notícias</h1>
+        <nav>
+            <ul>
+                <li><a href="#esportes">Esportes</a></li>
+                <li><a href="#economia">Economia</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#moda">Moda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Esportes -->
+    <section id="esportes" class="category esportes">
+        <h2>Esportes</h2>
+        <div class="articles">
+            <div class="article">
+                <img src="https://lncimg.lance.com.br/uploads/2023/12/000_33TZ3KL-1-aspect-ratio-512-320.jpg" alt="Futebol">
+                <div class="article-content">
+                    <h3>Grande clássico na noite de hoje</h3>
+                    <p>A Liga Saudita conta com alguns dos melhores jogadores: Cristiano Ronaldo, que vem quebrando recordes a cada partida da competição.</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+            <div class="article">
+                <img src="https://image.kurier.at/images/cfs_landscape_1232w_693h/8515792/46-203234300.jpg" alt="Superbowl">
+                <div class="article-content">
+                    <h3>Noite do Superbowl</h3>
+                    <p>É um dos maiores e mais vistos eventos desportivos nos EUA. A Super Bowl, a famosa final do campeonato de futebol americano, é imperdível na...</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+            <div class="article">
+                <img src="https://images.prismic.io/warriorscom/ZwayZ4F3NbkBXFyj_2025NBAAllStar1280x720.png?auto=format,compress?auto=compress,format" alt="NBA">
+                <div class="article-content">
+                    <h3>Notícia sobre a NBA</h3>
+                    <p>Confira as opções de transmissão para as partidas desta terça-feira (14) na NBA, com direito a duas revanches de duelos do final de semana.</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economia -->
+    <section id="economia" class="category economia">
+        <h2>Economia</h2>
+        <div class="articles">
+            <div class="article">
+                <img src="https://media.seudinheiro.com/uploads/2024/04/CAPAS-ISABELLE-4-715x402.jpg" alt="Dólar">
+                <div class="article-content">
+                    <h3>Dólar em alta de 0.50%</h3>
+                    <p>Dólar acima dos R$ 5,20: disparada da moeda americana é um alerta para o investidor proteger...</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+            <div class="article">
+                <img src="https://img.freepik.com/fotos-premium/dinheiro-euro-fundo-de-dinheiro-euro-notas-de-dinheiro-euro_357889-6812.jpg" alt="Euro">
+                <div class="article-content">
+                    <h3>Euro em queda de 0.40%</h3>
+                    <p>Moeda europeia atinge menor cotação em 2 anos; Goldman Sachs avalia que euro pode valer US$ 0,97.</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+            <div class="article">
+                <img src="https://wallpapers.com/images/hd/plataforma-de-petroleo-1920-x-1080-v2essteodr5wc9sk.jpg" alt="Petróleo">
+                <div class="article-content">
+                    <h3>Alta no preço do barril de petróleo</h3>
+                    <p>Petróleo perde fôlego e fecha em queda após atingir valor histórico na sessão; entenda.</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologia -->
+    <section id="tecnologia" class="category tecnologia">
+        <h2>Tecnologia</h2>
+        <div class="articles">
+            <div class="article">
+                <img src="https://www.hardware.com.br/wp-content/uploads/static/wp/2023/03/30/Elon-Musk-inteligencia-artificial_00.jpg" alt="Inteligência Artificial">
+                <div class="article-content">
+                    <h3>Avanços em Inteligência Artificial</h3>
+                    <p>Desvendando a Nova Inteligência Artificial de Elon Musk.</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+            <div class="article">
+                <img src="https://media.licdn.com/dms/image/D4D12AQHFr_a0leopfA/article-cover_image-shrink_720_1280/0/1716495085219?e=2147483647&v=beta&t=nrA9lZ5yh8gbhR0jkX0SPdyOpGV3YicNcl5Q6tXSdTQ" alt="5G">
+                <div class="article-content">
+                    <h3>Expansão da tecnologia 5G</h3>
+                    <p>A tecnologia 5G está revolucionando a forma como nos comunicamos e interagimos com o mundo digital.</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moda -->
+    <section id="moda" class="category moda">
+        <h2>Moda</h2>
+        <div class="articles">
+            <div class="article">
+                <img src="https://www.fashiontrends.com.br/wp-content/uploads/2024/09/Tendencia-de-cores-outono-inverno-2025.jpg" alt="Estilo">
+                <div class="article-content">
+                    <h3>Tendências para o inverno</h3>
+                    <p>Que cores usaremos na moda no outono/inverno 2025? Os especialistas em cores da Pantone e nós, analisamos as tendências mais importantes para você.</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+            <div class="article">
+                <img src="https://blog.etiquetaunica.com.br/wp-content/uploads/2024/09/michael-kors-nyfw-verao-2025-semana-de-moda-de-nova-york-110924.jpg" alt="Passarela">
+                <div class="article-content">
+                    <h3>Destaques das passarelas</h3>
+                    <p>Michael Kors na NYFW: Desfile de Verão 2025 celebra a Itália! - Etiqueta Unica.</p>
+                    <a href="#">Ler mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

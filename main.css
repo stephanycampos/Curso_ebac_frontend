@@ -1,0 +1,65 @@
+/* Fundo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d4edda;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    color: #155724;
+    font-size: 24px;
+}
+
+/* Container da lista */
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho da tabela */
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Estilização dos itens da lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilização das notas */
+.nota {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Cor da nota baseada no resultado */
+.aprovado {
+    background-color: #28a745;
+    color: white;
+}
+
+.reprovado {
+    background-color: #dc3545;
+    color: white;
+}

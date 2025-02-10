@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto com jQuery</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+
+<!-- Menu Hamburguer -->
+<nav class="navbar">
+    <div class="logo">Motor Club - A melhor Concessionaria!</div>
+    <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<!-- Carrossel de Imagens -->
+<section class="carousel-container">
+    <div id="carousel">
+        <img src="slide1.png.png" alt="Carro da Porsche">
+        <img src="slide2.png.png" alt="Carro da BMW">
+        <img src="slide3.png.png" alt="Carro da Ford">
+    </div>
+</section>
+
+<!-- Opções de Carros -->
+<section class="car-options">
+    <h2>Escolha seu carro</h2>
+    <div class="options">
+        <div class="car">
+            <img src="car1.png" alt="Carro da Porsche">
+            <h3>Porsche</h3>
+            <p>R$ 300.000,00</p>
+            <p>Câmbio automático, 4 portas, vidro e travas automáticas.</p>
+            <button class="interesse-btn" onclick="window.location.href='#form';">Tenho Interesse</button>
+        </div>
+        <div class="car">
+            <img src="car2.png" alt="Carro da BMW">
+            <h3>BMW</h3>
+            <p>R$ 250.000,00</p>
+            <p>Câmbio automático, 4 portas, vidro e travas automáticas.</p>
+            <button class="interesse-btn" onclick="window.location.href='#form';">Tenho Interesse</button>
+        </div>
+        <div class="car">
+            <img src="car3.png" alt="Carro da Ford">
+            <h3>Ford</h3>
+            <p>R$ 180.000,00</p>
+            <p>Câmbio automático, 4 portas, vidro e travas automáticas.</p>
+            <button class="interesse-btn" onclick="window.location.href='#form';">Tenho Interesse</button>
+        </div>
+    </div>
+</section>
+
+<!-- Promoções -->
+<section class="car-options">
+    <h2>Promoções</h2>
+    <div class="options">
+        <div class="car">
+            <img src="car1.png" alt="Carro da Porsche">
+            <h3>Porsche</h3>
+            <p><del>R$ 300.000,00</del> <span class="new-price">R$ 270.000,00</span></p>
+            <p>Câmbio automático, 4 portas, vidro e travas automáticas.</p>
+            <button class="interesse-btn" onclick="window.location.href='#form';">Tenho Interesse</button>
+        </div>
+        <div class="car">
+            <img src="car2.png" alt="Carro da BMW">
+            <h3>BMW</h3>
+            <p><del>R$ 250.000,00</del> <span class="new-price">R$ 220.000,00</span></p>
+            <p>Câmbio automático, 4 portas, vidro e travas automáticas.</p>
+            <button class="interesse-btn" onclick="window.location.href='#form';">Tenho Interesse</button>
+        </div>
+        <div class="car">
+            <img src="car3.png" alt="Carro da Ford">
+            <h3>Ford</h3>
+            <p><del>R$ 180.000,00</del> <span class="new-price">R$ 160.000,00</span></p>
+            <p>Câmbio automático, 4 portas, vidro e travas automáticas.</p>
+            <button class="interesse-btn" onclick="window.location.href='#form';">Tenho Interesse</button>
+        </div>
+    </div>
+</section>
+
+<!-- Formulário de Contato -->
+<div class="container" id="form">
+    <h2>Contato</h2>
+    <form id="formulario">
+        <div class="form-campo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="John Doe">
+        </div>
+        <div class="form-campo">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999">
+        </div>
+        <div class="form-campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="email@exemplo.com">
+        </div>
+        <div class="form-campo">
+            <label for="veiculo">Veículo de Interesse</label>
+            <input type="text" id="veiculo" name="veiculo" placeholder="Porsche, BMW, Ford">
+        </div>
+        <div class="form-campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+        <p id="sucesso" style="color: green; display: none;">Enviado com sucesso!</p>
+    </form>
+</div>
+
+<!-- Rodapé -->
+<footer>
+    <p>&copy; 2025 Motor Club. Todos os direitos reservados.</p>
+</footer>
+
+<script src="./js/jquery.mask.min.js"></script>
+<script src="./js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/messages_pt_BR.min.js"></script>
+<script src="./js/main.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Carrossel
+        $('#carousel').slick({
+            autoplay: true,
+            arrows: false
+        });
+
+        // Máscaras de entrada
+        $('#telefone').mask('(00) 00000-0000');
+
+        // Validação do Formulário
+        $('#formulario').validate({
+            rules: {
+                nome: {
+                    required: true
+                },
+                telefone: {
+                    required: true,
+                    minlength: 11
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                veiculo: {
+                    required: true
+                },
+                mensagem: {
+                    required: true
+                }
+            },
+            messages: {
+                nome: "Por favor, insira seu nome.",
+                telefone: "Por favor, insira um telefone válido com 11 dígitos.",
+                email: "Por favor, insira um e-mail válido.",
+                veiculo: "Por favor, insira o veículo de interesse.",
+                mensagem: "Por favor, insira uma mensagem."
+            },
+            submitHandler: function(form) {
+                // Mensagem de sucesso
+                $('#sucesso').show();
+                setTimeout(function() {
+                    $('#sucesso').hide();
+                    form.reset();
+                }, 3000);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+

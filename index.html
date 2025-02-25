@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <!-- Link da CDN do Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para o CSS customizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-5">Cadastro de Usuário</h2>
+        <form id="formCadastro" class="mt-4">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                <small id="emailError" class="form-text text-danger" style="display:none;">Por favor, digite um e-mail válido (com @).</small>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
+                <small id="telefoneError" class="form-text text-danger" style="display:none;">Número de telefone inválido (máximo 11 dígitos).</small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+        </form>
+
+        <!-- Mensagem de sucesso -->
+        <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
+            Seu cadastro foi concluído com sucesso!
+        </div>
+    </div>
+
+    <!-- Link para o JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript customizado -->
+    <script>
+        // Função de validação do e-mail
+        document.getElementById("email").addEventListener("input", function() {
+            const email = document.getElementById("email");
+            const emailError = document.getElementById("emailError");
+            
+            // Verificando se o e-mail contém o "@" para ser válido
+            if (!email.value.includes("@")) {
+                email.classList.add("is-invalid");
+                emailError.style.display = "block";
+            } else {
+                email.classList.remove("is-invalid");
+                emailError.style.display = "none";
+            }
+        });
+
+        // Função de validação do telefone
+        document.getElementById("telefone").addEventListener("input", function() {
+            const telefone = document.getElementById("telefone");
+            const telefoneError = document.getElementById("telefoneError");
+
+            // Verificando se o telefone tem mais de 11 dígitos
+            if (telefone.value.length > 11) {
+                telefone.classList.add("is-invalid");
+                telefoneError.style.display = "block";
+            } else {
+                telefone.classList.remove("is-invalid");
+                telefoneError.style.display = "none";
+            }
+        });
+
+        // Função de envio do formulário
+        document.getElementById("formCadastro").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio do formulário para testes
+
+            // Obtendo os valores dos campos
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const telefone = document.getElementById("telefone").value;
+
+            // Verificação final do formulário antes de enviar
+            if (!email.includes("@")) {
+                alert("Por favor, insira um e-mail válido.");
+                return;
+            }
+
+            if (telefone.length > 11) {
+                alert("Por favor, insira um telefone válido.");
+                return;
+            }
+
+            // Exibindo os dados no console (pode substituir por um envio real)
+            console.log("Nome:", nome);
+            console.log("E-mail:", email);
+            console.log("Telefone:", telefone);
+
+            // Mensagem de sucesso
+            const successMessage = document.getElementById("successMessage");
+            successMessage.style.display = "block"; // Exibe a mensagem de sucesso
+
+            // Após alguns segundos, a mensagem de sucesso desaparece
+            setTimeout(function() {
+                successMessage.style.display = "none";
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

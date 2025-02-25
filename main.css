@@ -1,0 +1,24 @@
+/* Customizações do CSS */
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+h2 {
+    color: #343a40;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px;
+}
+
+/* Estilo para a borda vermelha quando há erro */
+.is-invalid {
+    border-color: red;
+}
+

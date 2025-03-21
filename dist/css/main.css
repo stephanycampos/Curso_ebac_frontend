@@ -1,0 +1,22 @@
+/* Error: This file is already being loaded.
+ *   ,--> src\sass\base.scss
+ * 2 | @import 'base'; 
+ *   |         ^^^^^^ new load
+ *   '
+ *   ,--> src\sass\main.scss
+ * 2 | @import 'base'; 
+ *   |         ====== original load
+ *   '
+ *   src\sass\base.scss 2:9  @import
+ *   src\sass\main.scss 2:9  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: This file is already being loaded.\a   \250c \2500 \2500 > src\\sass\\base.scss\a 2 \2502  @import 'base'; \d\a   \2502          ^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > src\\sass\\main.scss\a 2 \2502  @import 'base'; \a   \2502          \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   src\\sass\\base.scss 2:9  @import\a   src\\sass\\main.scss 2:9  root stylesheet";
+}
